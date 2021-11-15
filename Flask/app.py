@@ -40,7 +40,7 @@ def predict():
     print(output)
     if(output==1) :
         return render_template("result.html",prediction_text = "The Suggested Material is ABS.(Acrylonitrile butadiene styrene is a common thermoplastic polymer typically used for injection molding applications)")
-    elif(output==0) :
+    elif(output>=0) :
         return render_template("result.html",prediction_text = "The Suggested Material is PLA.(PLA, also known as polylactic acid or polylactide, is a thermoplastic made from renewable resources such as corn starch, tapioca roots or sugar cane, unlike other industrial materials made primarily from petroleum)")
     else :
         return render_template("result.html",prediction_text = 'The given values do not match the range of values of the model.Try giving the values in the mnetioned range')
